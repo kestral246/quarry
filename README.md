@@ -3,7 +3,7 @@ Quarry Mechanics [quarry]
 
 By David G [kestral246@gmail.com]
 
-This mod adds quarry mechanics to stone blocks.
+This mod adds quarry mechanics to stone nodes.
 
 
 ![Quarry Screenshot](screenshot.png "Quarry")
