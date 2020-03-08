@@ -39,6 +39,16 @@ Additional notes
 - Finally, for consistency, dirt nodes are also made falling, and the wooden pickaxe has optionally been removed and replaced with a flint pickaxe.
 
 
+Craft Recipes
+-------------
+
+![Flint Pickaxe](images/flint_pickaxe.png "Flint Pickaxe")
+![Quarry Hammer](images/stone_quarry_hammer.png "Stone Quarry Hammer")
+
+![Trowel and Mortar](images/trowel_and_mortar.png "Trowel and Mortar")
+![Scaffold](images/scaffold.png "Scaffold")
+
+
 Dependencies
 ------------
 default, bucket, stairs
