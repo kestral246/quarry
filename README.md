@@ -51,8 +51,9 @@ Craft Recipes
 
 Dependencies
 ------------
-default, bucket, stairs
+default, bucket, stairs, and [stonebrick\_dungeons](https://forum.minetest.net/viewtopic.php?f=11&t=18457) (by Hamlet)
 
+*Since quarry mechanics changes cobble to falling nodes, stonebrick\_dungeons is needed to keep dungeons solid.*
 
 Licenses
 --------
