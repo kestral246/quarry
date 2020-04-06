@@ -1,3 +1,16 @@
+-- Make gravel digging consistent with cobble.
+-- However, this could go either way.
+-- With the default crumbly = 3, both cobble and gravel are easy to dig
+--   by hand, so shovels aren't really necessary.
+-- Setting crumbly = 2 for both, makes switching to shovels advantageous,
+--   at the cost of making stone even more difficult to work.
+
+minetest.override_item("default:gravel", {
+	groups = {crumbly = 3, falling_nodes = 1},
+})
+
+-- Make dirt nodes also falling.
+
 minetest.override_item("default:dirt", {
 	groups = {crumbly = 3, soil = 1, falling_node = 1},
 })
