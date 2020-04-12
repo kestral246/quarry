@@ -6,7 +6,7 @@
 --   at the cost of making stone even more difficult to work.
 
 minetest.override_item("default:gravel", {
-	groups = {crumbly = 3, falling_nodes = 1},
+	groups = {crumbly = 3, falling_node = 1},
 })
 
 -- Make dirt nodes also falling.
