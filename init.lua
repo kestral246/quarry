@@ -1,9 +1,9 @@
 -- Quarry Mechanics [quarry]
 -- by David_G [kestral246@gmail.com]
--- 2020-03-06
+-- 2020-04-15
 
 -- Optionally replace wooden pickaxe with flint one.
-local replace_wooden_pickaxe = true
+local replace_wooden_pickaxe = minetest.settings:get_bool("quarry_replace_wooden_pickaxe", true)
 
 -- Other overrides.
 dofile(minetest.get_modpath("quarry").."/falling_nodes.lua")

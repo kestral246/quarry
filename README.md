@@ -49,6 +49,21 @@ Craft Recipes
 ![Scaffold](images/scaffold.png "Scaffold")
 
 
+Early Game Considerations
+-------------------------
+
+By default, the wooden pickaxe has been removed. There are two other ways to get started digging stone:
+
+- Find three flints (in gravel) and make a flint pickaxe.
+
+- Find a dungeon that has cobble floors, and make a stone pickaxe (cobble can be picked up by hand).
+
+However, there are two configuration options that could change this:
+
+- quarry\_replace\_wooden\_pickaxe = false, will keep wooden pickaxe in game.
+
+- stonebrick\_dungeons\_change\_floor = true, will get rid of cobble floors in dungeons.
+
 Dependencies
 ------------
 default, bucket, stairs, and [stonebrick\_dungeons](https://forum.minetest.net/viewtopic.php?f=11&t=18457) (by Hamlet)
