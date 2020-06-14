@@ -19,8 +19,28 @@ What do I mean by that?
 - For building, a Trowel and Mortar tool is provided. It can mortar placed cobble nodes into stonebrick nodes, and mortar placed cut\_stone nodes back into stone nodes.
 
 
+Special notes
+-------------
+
+**What happens when this mod is installed in an existing world?**
+
+- Existing cobble nodes will fall when touched. This is problematic since dungeons have cobble ceilings.
+
+- Hamlet's stonebrick\_dungeons is a required dependency to deal with this problem, but it only works on newly-made dungeons, not preexisting ones.
+
+- In addition, quarry currently only supports Minetest default game. It's likely that there are other mods that will conflict with this mod.
+
+**What happens when this mod is removed from a world?**
+
+- Cobble will stop being a falling node.
+
+- And just like every other mod, all tools and nodes defined in this mod will become unknown.
+ 
+
 Additional notes
 ----------------
+
+- **New:** default:gravel now turns into quarry:gravel when dug. This is to prevent digging through the same gravel nodes over and over to find flint. (The texture is slightly lighter.)
 
 - Cobble cannot be converted back into stone by melting it in a furnace.
 

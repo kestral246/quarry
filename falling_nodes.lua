@@ -4,9 +4,27 @@
 --   by hand, so shovels aren't really necessary.
 -- Setting crumbly = 2 for both, makes switching to shovels advantageous,
 --   at the cost of making stone even more difficult to work.
+--
+-- In addition, digging gravel now drops quarry:gravel, which doesn't drop flint.
+-- That way, player can't just keep redigging their gravel inventory to get more flints.
+-- 2020-06-13
 
 minetest.override_item("default:gravel", {
 	groups = {crumbly = 3, falling_node = 1},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"default:flint"}, rarity = 16},
+			{items = {"quarry:gravel"}}
+		}
+	}
+})
+
+minetest.register_node("quarry:gravel", {
+	description = ("Gravel"),
+	tiles = {"quarry_gravel.png"},
+	groups = {crumbly = 3, falling_node = 1},
+	sounds = default.node_sound_gravel_defaults(),
 })
 
 -- Make dirt nodes also falling.
