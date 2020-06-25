@@ -7,8 +7,9 @@
 --
 -- In addition, digging gravel now drops quarry:gravel, which doesn't drop flint.
 -- That way, player can't just keep redigging their gravel inventory to get more flints.
--- 2020-06-13
+-- 2020-06-24
 
+-- Only check for flint drop one time.
 minetest.override_item("default:gravel", {
 	groups = {crumbly = 3, falling_node = 1},
 	drop = {
@@ -20,12 +21,22 @@ minetest.override_item("default:gravel", {
 	}
 })
 
+-- Replacement gravel that doesn't drop flint.
 minetest.register_node("quarry:gravel", {
 	description = ("Gravel"),
 	tiles = {"quarry_gravel.png"},
 	groups = {crumbly = 3, falling_node = 1},
 	sounds = default.node_sound_gravel_defaults(),
 })
+
+-- Add additional gunpowder recipe that uses quarry:gravel.
+if minetest.get_modpath("tnt") ~= nil then
+	minetest.register_craft({
+		output = "tnt:gunpowder 5",
+		type = "shapeless",
+		recipe = {"default:coal_lump", "quarry:gravel"}
+	})
+end
 
 -- Make dirt nodes also falling.
 
