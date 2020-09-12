@@ -1,6 +1,0 @@
-# This file contains settings for quarry that can be changed in
-# minetest.conf
-
-#    Get rid of wooden pickaxe and replace it with a flint pickaxe.
-#    (default = true)
-quarry_replace_wooden_pickaxe (Replace wooden pickaxe) bool true

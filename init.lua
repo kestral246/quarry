@@ -1,9 +1,6 @@
 -- Quarry Mechanics [quarry]
 -- by David_G [kestral246@gmail.com]
--- 2020-04-15
-
--- Optionally replace wooden pickaxe with flint one.
-local replace_wooden_pickaxe = minetest.settings:get_bool("quarry_replace_wooden_pickaxe", true)
+-- 2020-09-12
 
 -- Other overrides.
 dofile(minetest.get_modpath("quarry").."/falling_nodes.lua")
@@ -503,27 +500,25 @@ minetest.register_tool("quarry:trowel_and_mortar", {
 	sound = {breaks = "default_tool_breaks"},
 })
 
--- Optional flint pickaxe.
-if replace_wooden_pickaxe then
-	minetest.register_tool("quarry:pick_flint", {
-		description = "Flint Pickaxe",
-		inventory_image = "quarry_flint_pick.png",
-		tool_capabilities = {
-			full_punch_interval = 1.2,
-			max_drop_level=0,
-			groupcaps={
-				cracky = {times={[3]=1.6}, uses=4, maxlevel=1},
-			},
-			damage_groups = {fleshy=2},
+-- Add flint pickaxe.
+minetest.register_tool("quarry:pick_flint", {
+	description = "Flint Pickaxe",
+	inventory_image = "quarry_flint_pick.png",
+	tool_capabilities = {
+		full_punch_interval = 1.2,
+		max_drop_level=0,
+		groupcaps={
+			cracky = {times={[3]=1.6}, uses=4, maxlevel=1},
 		},
-		sound = {breaks = "default_tool_breaks"},
-		groups = {pickaxe = 1}
-	})
+		damage_groups = {fleshy=2},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {pickaxe = 1}
+})
 
-	-- Get rid of wood pickaxe.
-	minetest.unregister_item("default:pick_wood")
-	minetest.clear_craft({output = "default:pick_wood"})
-end
+-- Get rid of wood pickaxe.
+minetest.unregister_item("default:pick_wood")
+minetest.clear_craft({output = "default:pick_wood"})
 
 -- These stone nodes can no longer be crafted directly.
 for _,nodename in pairs({
@@ -589,13 +584,11 @@ minetest.register_craft({
 	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"}},
 })
 
-if replace_wooden_pickaxe then
-	minetest.register_craft({
-		output = "quarry:pick_flint",
-		recipe = {
-				{"default:flint", "default:flint", "default:flint"},
-				{"", "group:stick", ""},
-				{"", "group:stick", ""}
-		}
-	})
-end
+minetest.register_craft({
+	output = "quarry:pick_flint",
+	recipe = {
+			{"default:flint", "default:flint", "default:flint"},
+			{"", "group:stick", ""},
+			{"", "group:stick", ""}
+	}
+})

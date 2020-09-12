@@ -56,7 +56,7 @@ Additional notes
 
 - A scaffold node is provided to support the cobble and cut\_stone nodes while digging and mortaring them.
 
-- Finally, for consistency, dirt nodes are also made falling, and the wooden pickaxe has optionally been removed and replaced with a flint pickaxe.
+- Finally, for consistency, dirt nodes are also made falling, and the wooden pickaxe has been removed and replaced with a flint pickaxe.
 
 
 Craft Recipes
@@ -72,17 +72,12 @@ Craft Recipes
 Early Game Considerations
 -------------------------
 
-By default, the wooden pickaxe has been removed. There are two other ways to get started digging stone:
+Since the wooden pickaxe has been removed, other ways are needed to get started digging stone:
 
 - Find three flints (in gravel) and make a flint pickaxe.
 
-- Find a dungeon that has cobble floors, and make a stone pickaxe (cobble can be picked up by hand).
+- Find a dungeon that has cobble floors, and make a stone pickaxe (cobble can be picked up by hand). *[But only if stonebrick\_dungeons mod is using its default to keep cobble floors.]*
 
-However, there are two configuration options that could change this:
-
-- quarry\_replace\_wooden\_pickaxe = false, will keep wooden pickaxe in game.
-
-- stonebrick\_dungeons\_change\_floor = true, will get rid of cobble floors in dungeons.
 
 Dependencies
 ------------
