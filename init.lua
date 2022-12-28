@@ -2,9 +2,6 @@
 -- by David_G [kestral246@gmail.com]
 -- 2020-09-12
 
--- Other overrides.
-dofile(minetest.get_modpath("quarry").."/falling_nodes.lua")
-
 -- Utility functions.
 
 -- Override stone_with_* nodes to leave cobble in ground.
