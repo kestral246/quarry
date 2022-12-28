@@ -49,7 +49,7 @@ minetest.register_craft({
 	recipe = {
 		"default:clay", "default:clay", "default:clay",
 		"group:sand", "group:sand", "group:sand",
-		"default:steel_ingot", "bucket:bucket_water"
+		"group:stick", "default:steel_ingot", "bucket:bucket_water"
 	},
 	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"}},
 })
