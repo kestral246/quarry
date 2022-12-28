@@ -500,26 +500,6 @@ minetest.register_tool("quarry:trowel_and_mortar", {
 	sound = {breaks = "default_tool_breaks"},
 })
 
--- Add flint pickaxe.
-minetest.register_tool("quarry:pick_flint", {
-	description = "Flint Pickaxe",
-	inventory_image = "quarry_flint_pick.png",
-	tool_capabilities = {
-		full_punch_interval = 1.2,
-		max_drop_level=0,
-		groupcaps={
-			cracky = {times={[3]=1.6}, uses=4, maxlevel=1},
-		},
-		damage_groups = {fleshy=2},
-	},
-	sound = {breaks = "default_tool_breaks"},
-	groups = {pickaxe = 1}
-})
-
--- Get rid of wood pickaxe.
-minetest.unregister_item("default:pick_wood")
-minetest.clear_craft({output = "default:pick_wood"})
-
 -- These stone nodes can no longer be crafted directly.
 for _,nodename in pairs({
 		"default:stone", "stairs:slab_stone", "stairs:stair_stone", "stairs:stair_inner_stone", "stairs:stair_outer_stone", 
@@ -582,13 +562,4 @@ minetest.register_craft({
 		"default:steel_ingot", "bucket:bucket_water"
 	},
 	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"}},
-})
-
-minetest.register_craft({
-	output = "quarry:pick_flint",
-	recipe = {
-			{"default:flint", "default:flint", "default:flint"},
-			{"", "group:stick", ""},
-			{"", "group:stick", ""}
-	}
 })
