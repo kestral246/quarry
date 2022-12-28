@@ -79,7 +79,7 @@ quarry.override_hammer("stairs:stair_outer_desert_stone", "stairs:stair_outer_cu
 
 -- Cut Desert Stone (m)
 minetest.register_node("quarry:cut_desert_stone", {
-	description = "Cut Stone",
+	description = "Cut Desert Stone",
 	tiles = {"default_desert_stone.png^quarry_cut_stone.png"},
 	groups = {cracky = 3, stone = 1, falling_node = 1, dig_immediate = 2},
 	drop = "quarry:cut_desert_stone",
@@ -87,7 +87,7 @@ minetest.register_node("quarry:cut_desert_stone", {
 	sounds = default.node_sound_stone_defaults(),
 	on_dig = quarry.mortar_on_dig("default:desert_stone", {sticky = 2}),
 })
-stairs.register_stair_and_slab("cut_desert_stone","quarry:cut_desert_stone",{cracky = 3},{"default_desert_stone.png^quarry_cut_stone.png"},"Cut Stone Stair","Cut Stone Slab",default.node_sound_stone_defaults(),true)
+stairs.register_stair_and_slab("cut_desert_stone","quarry:cut_desert_stone",{cracky = 3},{"default_desert_stone.png^quarry_cut_stone.png"},"Cut Desert Stone Stair","Cut Desert Stone Slab",default.node_sound_stone_defaults(),true)
 quarry.override_mortar("stairs:slab_cut_desert_stone", "stairs:slab_desert_stone", {cracky = 3, stone = 1, falling_node = 1, dig_immediate = 2}, {sticky = 2})
 quarry.override_mortar("stairs:stair_cut_desert_stone", "stairs:stair_desert_stone", {cracky = 3, stone = 1, falling_node = 1, dig_immediate = 2}, {sticky = 2})
 quarry.override_mortar("stairs:stair_inner_cut_desert_stone", "stairs:stair_inner_desert_stone", {cracky = 3, stone = 1, falling_node = 1, dig_immediate = 2}, {sticky = 2})
@@ -102,7 +102,7 @@ quarry.override_hammer("stairs:stair_outer_desert_stone_block", "stairs:stair_ou
 
 -- Cut Desert Stone Block (m)
 minetest.register_node("quarry:cut_desert_stone_block", {
-	description = "Cut Stone Block",
+	description = "Cut Desert Stone Block",
 	tiles = {"default_desert_stone_block.png^quarry_cut_stone_block.png"},
 	groups = {cracky = 2, stone = 1, falling_node = 1, dig_immediate = 2},
 	drop = "quarry:cut_desert_stone_block",
@@ -110,7 +110,7 @@ minetest.register_node("quarry:cut_desert_stone_block", {
 	sounds = default.node_sound_stone_defaults(),
 	on_dig = quarry.mortar_on_dig("default:desert_stone_block", {sticky = 2}),
 })
-stairs.register_stair_and_slab("cut_desert_stone_block","quarry:cut_stone_block",{cracky = 2},{"default_desert_stone_block.png^quarry_cut_stone_block.png"},"Cut Stone Block Stair","Cut Stone Block Slab",default.node_sound_stone_defaults(),true)
+stairs.register_stair_and_slab("cut_desert_stone_block","quarry:cut_desert_stone_block",{cracky = 2},{"default_desert_stone_block.png^quarry_cut_stone_block.png"},"Cut Desert Stone Block Stair","Cut Desert Stone Block Slab",default.node_sound_stone_defaults(),true)
 quarry.override_mortar("stairs:slab_cut_desert_stone_block", "stairs:slab_desert_stone_block", {cracky = 2, stone = 1, falling_node = 1, dig_immediate = 2}, {sticky = 2})
 quarry.override_mortar("stairs:stair_cut_desert_stone_block", "stairs:stair_desert_stone_block", {cracky = 2, stone = 1, falling_node = 1, dig_immediate = 2}, {sticky = 2})
 quarry.override_mortar("stairs:stair_inner_cut_desert_stone_block", "stairs:stair_inner_desert_stone_block", {cracky = 2, stone = 1, falling_node = 1, dig_immediate = 2}, {sticky = 2})
@@ -186,7 +186,7 @@ minetest.register_node("quarry:sandstone_rubble", {
 	sounds = default.node_sound_stone_defaults(),
 	on_dig = quarry.mortar_on_dig("default:sandstonebrick", {sticky = 3}),
 })
-stairs.register_stair_and_slab("sandstone_rubble","quarry:sandstone_rubble",{cracky = 2},{"default_sandstone.png^quarry_rubble_overlay.png^quarry_cut_stone.png"},"Sandstone Rubble Stair","Sandstone Rubble Slab",default.node_sound_stone_defaults(),true)
+stairs.register_stair_and_slab("sandstone_rubble","quarry:sandstone_rubble",{cracky = 2},{"default_sandstone.png^quarry_rubble_overlay.png"},"Sandstone Rubble Stair","Sandstone Rubble Slab",default.node_sound_stone_defaults(),true)
 quarry.override_mortar("stairs:slab_sandstone_rubble", "stairs:slab_sandstonebrick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
 quarry.override_mortar("stairs:stair_sandstone_rubble", "stairs:stair_sandstonebrick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
 quarry.override_mortar("stairs:stair_inner_sandstone_rubble", "stairs:stair_inner_sandstonebrick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
@@ -249,13 +249,13 @@ quarry.override_mortar("stairs:stair_outer_cut_desert_sandstone_block", "stairs:
 -- Desert Sandstone Rubble (m)
 minetest.register_node("quarry:desert_sandstone_rubble", {
 	description = "Desert Sandstone Rubble",
-	tiles = {"default_desert_sandstone.png^quarry_rubble_overlay.png"},
+	tiles = {"default_desert_sandstone.png^quarry_rubble_overlay_desert.png"},
 	is_ground_content = false,
 	groups = {crumbly = 3, stone = 2, falling_node = 1},
 	sounds = default.node_sound_stone_defaults(),
 	on_dig = quarry.mortar_on_dig("default:desert_sandstone_brick", {sticky = 3}),
 })
-stairs.register_stair_and_slab("desert_sandstone_rubble","quarry:desert_sandstone_rubble",{cracky = 2},{"default_desert_sandstone.png^quarry_rubble_overlay.png^quarry_cut_stone.png"},"Desert Sandstone Rubble Stair","Desert Sandstone Rubble Slab",default.node_sound_stone_defaults(),true)
+stairs.register_stair_and_slab("desert_sandstone_rubble","quarry:desert_sandstone_rubble",{cracky = 2},{"default_desert_sandstone.png^quarry_rubble_overlay_desert.png"},"Desert Sandstone Rubble Stair","Desert Sandstone Rubble Slab",default.node_sound_stone_defaults(),true)
 quarry.override_mortar("stairs:slab_desert_sandstone_rubble", "stairs:slab_desert_sandstone_brick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
 quarry.override_mortar("stairs:stair_desert_sandstone_rubble", "stairs:stair_desert_sandstone_brick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
 quarry.override_mortar("stairs:stair_inner_desert_sandstone_rubble", "stairs:stair_inner_desert_sandstone_brick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
@@ -318,13 +318,13 @@ quarry.override_mortar("stairs:stair_outer_cut_silver_sandstone_block", "stairs:
 -- Silver Sandstone Rubble (m)
 minetest.register_node("quarry:silver_sandstone_rubble", {
 	description = "Silver Sandstone Rubble",
-	tiles = {"default_silver_sandstone.png^quarry_rubble_overlay.png"},
+	tiles = {"default_silver_sandstone.png^quarry_rubble_overlay_silver.png"},
 	is_ground_content = false,
 	groups = {crumbly = 3, stone = 2, falling_node = 1},
 	sounds = default.node_sound_stone_defaults(),
 	on_dig = quarry.mortar_on_dig("default:silver_sandstone_brick", {sticky = 3}),
 })
-stairs.register_stair_and_slab("silver_sandstone_rubble","quarry:silver_sandstone_rubble",{cracky = 2},{"default_silver_sandstone.png^quarry_rubble_overlay.png^quarry_cut_stone.png"},"Silver Sandstone Rubble Stair","Silver Sandstone Rubble Slab",default.node_sound_stone_defaults(),true)
+stairs.register_stair_and_slab("silver_sandstone_rubble","quarry:silver_sandstone_rubble",{cracky = 2},{"default_silver_sandstone.png^quarry_rubble_overlay_silver.png"},"Silver Sandstone Rubble Stair","Silver Sandstone Rubble Slab",default.node_sound_stone_defaults(),true)
 quarry.override_mortar("stairs:slab_silver_sandstone_rubble", "stairs:slab_silver_sandstone_brick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
 quarry.override_mortar("stairs:stair_silver_sandstone_rubble", "stairs:stair_silver_sandstone_brick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
 quarry.override_mortar("stairs:stair_inner_silver_sandstone_rubble", "stairs:stair_inner_silver_sandstone_brick", {crumbly = 3, stone = 1, falling_node = 1}, {sticky = 3})
