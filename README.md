@@ -59,7 +59,7 @@ Craft Recipes
 ![Quarry Hammer](images/stone_quarry_hammer.png "Stone Quarry Hammer")
 ![Trowel and Mortar](images/trowel_and_mortar.png "Trowel and Mortar")
 
-- **Note:** crafting a trowel will return an empty bucket.
+- **Note:** crafting a trowel will return an empty bucket (both water and river water buckets now supported).
 
 ![Scaffold](images/scaffold.png "Scaffold")
 

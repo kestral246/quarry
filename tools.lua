@@ -54,6 +54,18 @@ minetest.register_craft({
 	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"}},
 })
 
+-- Allow crafting with river water bucket.
+minetest.register_craft({
+	output = "quarry:trowel_and_mortar",
+	type = "shapeless",
+	recipe = {
+		"default:clay", "default:clay", "default:clay",
+		"group:sand", "group:sand", "group:sand",
+		"group:stick", "default:steel_ingot", "bucket:bucket_river_water"
+	},
+	replacements = {{"bucket:bucket_river_water", "bucket:bucket_empty"}},
+})
+
 -- Scaffolding to support falling stone nodes (instead of player).
 
 minetest.register_node("quarry:scaffold", {
