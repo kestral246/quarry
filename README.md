@@ -39,6 +39,16 @@ Crafting changes
 - Stairs and slabs are supported for all stone types. However, they have to be crafted from cut or cobble versions, and then mortared into the solid or brick versions.
 
 
+Updates
+-------
+
+- Added additional craft recipe for trowel using river water bucket.
+
+- Removed stone group from slab and stair nodes.
+
+- Added slab group to slab nodes, and stair group to stair nodes.
+
+
 Optional recommended mods
 ----------------------
 
