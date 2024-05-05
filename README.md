@@ -56,9 +56,9 @@ Optional recommended mods
 
 - Since the quarry mod makes cobblestone a falling node, using this mod will make dirt nodes more consistent by making them also falling.
 
-**Stonebrick Dungeons** by Hamlet ([stonebrick\_dungeons](https://content.minetest.net/packages/Hamlet/stonebrick_dungeons/)):
+**Note:**
 
-- In addition, since minetest dungeons have walls and ceilings made with cobblestone, the quarry mod will make dungeon ceilings collapse when touched. This mod will prevents this from happening by lining dungeons with stonebrick instead of cobble.
+- I've dropped the dependency on **Stonebrick Dungeons** by Hamlet, since this mod has been abandoned by the developer and deleted from ContentDB.
 
 - The alternatives are to either live with collapsing dungeons, or to disable the "Dungeons" mapgen flag during world creation.
 
@@ -79,7 +79,7 @@ Dependencies
 
 - required: default, bucket, stairs
 
-- optional: falling\_dirt, stonebrick\_dungeons
+- optional: falling\_dirt
 
 
 
