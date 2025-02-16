@@ -9,7 +9,7 @@ minetest.register_tool("quarry:stone_quarry_hammer", {
 		full_punch_interval = 1.3,
 		max_drop_level=0,
 		groupcaps={
-			cracky = {times={[2]=2.0, [3]=1.00}, uses=30, maxlevel=1},
+			cracky = {times={[1]=5.0, [2]=2.0, [3]=1.00}, uses=30, maxlevel=1},
 		},
 		damage_groups = {fleshy=3},
 	},
