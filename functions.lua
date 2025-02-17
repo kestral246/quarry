@@ -1,10 +1,11 @@
 -- Quarry: functions.lua
 
 -- Override stone_with_* nodes to leave cobble in ground.
-function quarry.override_with(node_name)
+function quarry.override_with(node_name, cobble_name)
+	cobble_name = cobble_name and cobble_name or "default:cobble"
 	minetest.override_item(node_name, {
 		after_dig_node = function(pos, oldnode, oldmetadata, digger)
-			minetest.set_node(pos, {name="default:cobble"})
+			minetest.set_node(pos, {name=cobble_name})
 			minetest.check_for_falling(pos)
 		end
 	})
